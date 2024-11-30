@@ -8,6 +8,8 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
+import SignalRProvider from "@/providers/signalR.provider";
+import { AppProvider } from "@/providers/app.provider";
 
 export const metadata: Metadata = {
   title: {
@@ -41,6 +43,8 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
+        <AppProvider>
+        <SignalRProvider/>
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
@@ -50,6 +54,7 @@ export default function RootLayout({
           
           </div>
         </Providers>
+        </AppProvider>
       </body>
     </html>
   );
