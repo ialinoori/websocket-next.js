@@ -9,8 +9,8 @@ export const siteConfig = {
       href: "/progress",
     },
     {
-      label: "Location",
-      href: "/location",
+      label: "Map",
+      href: "/map",
     }
   ],
 };

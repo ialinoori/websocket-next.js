@@ -8,7 +8,7 @@ import { useAppContext } from "./app.provider"
 const SignalRProvider = () => {
     const app = useAppContext()
     useEffect(()=>{
-        startSignalRConnection(app.setProgress)
+        startSignalRConnection(app.setProgress,app.addLocation)
 
     },[])
 
